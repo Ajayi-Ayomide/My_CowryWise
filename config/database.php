@@ -1,7 +1,7 @@
 <?php
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');     // Change this according to your MySQL username
-define('DB_PASS', '');         // Change this according to your MySQL password
+define('DB_USER', 'root');  
+define('DB_PASS', '');      
 define('DB_NAME', 'cowrywise_demo');
 
 // Create connection

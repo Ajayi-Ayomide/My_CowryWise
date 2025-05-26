@@ -4,7 +4,6 @@ $user = 'root';
 $password = '';
 
 try {
-    // Create connection without database selected
     $conn = new mysqli($host, $user, $password);
     
     if ($conn->connect_error) {
@@ -25,10 +24,9 @@ try {
     // Read and execute the SQL schema
     $sql = file_get_contents(__DIR__ . '/schema.sql');
     
-    // Execute multiple SQL statements
+   
     if ($conn->multi_query($sql)) {
         do {
-            // Store first result set
             if ($result = $conn->store_result()) {
                 $result->free();
             }
